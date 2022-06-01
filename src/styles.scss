@@ -1,0 +1,33 @@
+@import "./styles/index";
+@import 'typography';
+
+body {
+  background-color: color("light");
+}
+h1 {
+  @include headline-h1();
+}
+
+h2 {
+  @include headline-h2;
+}
+
+h3 {
+  @include headline-h3;
+}
+
+h4 {
+  @include headline-h4;
+}
+
+p, a {
+  @include paragraph;
+}
+
+small {
+  @include small;
+}
+
+button {
+  @include button;
+}

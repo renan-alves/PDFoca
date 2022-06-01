@@ -1,0 +1,90 @@
+@import "variables";
+
+@mixin headline-h1() {
+  font-style: normal;
+  font-size: rem(22px);
+  line-height: 1.2;
+  font-weight: 600;
+
+  @include mq('lg') {
+    font-size: rem(24px);
+  }
+
+  @include mq('xl') {
+    font-size: rem(28px);
+  }
+}
+
+@mixin headline-h2() {
+  font-weight: 600;
+  font-style: normal;
+  font-size: rem(22px);
+  line-height: 1.2;
+
+  @include mq('lg') {
+    font-size: rem(24px);
+  }
+
+  @include mq('xl') {
+    font-size: rem(28px);
+  }
+}
+
+@mixin headline-h3() {
+  font-weight: 500;
+  font-style: normal;
+  font-size: rem(16px);
+  line-height: 1.2;
+
+  @include mq('lg') {
+    font-size: rem(21px);
+  }
+
+  @include mq('xl') {
+    font-size: rem(24px);
+  }
+}
+
+@mixin headline-h4() {
+  font-weight: 400;
+  font-style: normal;
+  font-size: rem(16px);
+  line-height: 1.2;
+
+  @include mq('lg') {
+    font-size: rem(18px);
+  }
+}
+
+@mixin paragraph() {
+  font-weight: 400;
+  font-style: normal;
+  font-size: rem(14px);
+  line-height: 1.2;
+
+  @include mq('md') {
+    font-size: rem(16px);
+  }
+}
+
+@mixin small() {
+  font-weight: 400;
+  font-style: normal;
+  font-size: rem(10px);
+  line-height: 1.2;
+
+  @include mq('md') {
+    font-size: rem(12px);
+  }
+}
+
+@mixin button() {
+  font-weight: 600;
+  font-style: normal;
+  font-size: rem(12px);
+  line-height: 1.2;
+
+  @include mq('lg') {
+    font-size: rem(14px);
+  }
+}

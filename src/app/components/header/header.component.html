@@ -1,0 +1,35 @@
+<div class="header-container">
+  <div class="header-container__content">
+    <div class="header-container__content__logo">
+      <img src="assets/logo.png" />
+    </div>
+
+    <ng-container [ngSwitch]="isMobile">
+      <ng-container *ngSwitchCase="true" [ngTemplateOutlet]="mobile"></ng-container>
+      <ng-container *ngSwitchCase="false" [ngTemplateOutlet]="desktop"></ng-container>
+    </ng-container>
+
+  </div>
+</div>
+
+<ng-template #mobile>
+  <commons-button [icon]="faBars" (_click)="openMenu()"></commons-button>
+  <!-- <ul class="header-container__content__menu--mobile">
+    <li class="header-container__content__menu--mobile__item"><commons-anchor text="Home" [active]="link === '/home'"></commons-anchor></li>
+    <li class="header-container__content__menu--mobile__item"><commons-anchor text="Ajuda" [active]="link === '/ajuda'"></commons-anchor></li>
+    <li class="header-container__content__menu--mobile__item"><commons-anchor text="Contato" [active]="link === '/contato'"></commons-anchor></li>
+    <li class="header-container__content__menu--mobile__item"><commons-button text="Apoiar" [primary]="true"></commons-button></li>
+  </ul> -->
+</ng-template>
+
+<ng-template #desktop>
+  <ul class="header-container__content__menu--desktop">
+    <li class="header-container__content__menu--desktop__item"><commons-anchor text="Home" [active]="link === '/home'"></commons-anchor></li>
+    <li class="header-container__content__menu--desktop__item"><commons-anchor text="Ajuda" [active]="link === '/ajuda'"></commons-anchor></li>
+    <li class="header-container__content__menu--desktop__item"><commons-anchor text="Contato" [active]="link === '/contato'"></commons-anchor></li>
+  </ul>
+
+  <div class="header-container__content__menu--desktop__donate">
+    <commons-button text="Apoiar" [primary]="true"></commons-button>
+  </div>
+</ng-template>

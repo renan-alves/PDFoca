@@ -1,0 +1,61 @@
+@import "variables";
+@import "typography";
+
+.header-container {
+  @include headline-h4;
+  box-shadow: shadow('drop-shadow');
+  width: 100%;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 rem(15px);
+    max-width: size('xl');
+    position: relative;
+
+    &__logo {
+      flex: 1;
+
+      img {
+        object-fit: contain;
+      }
+    }
+
+    &__menu {
+      display: flex;
+      width: 100%;
+
+      &--mobile {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background-color: color("white");
+
+
+        &__item {
+          padding: rem(10px) 0;
+          text-align: center;
+        }
+      }
+
+      &--desktop {
+        flex: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        &__item {
+          padding: 0 rem(10px);
+        }
+
+        &__donate {
+          flex: 1;
+          text-align: right;
+        }
+      }
+    }
+  }
+}

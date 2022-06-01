@@ -1,0 +1,7 @@
+<button class="button-container" role="button" [class.button-container--primary]="primary"
+  [class.button-container--secondary]="secondary" [class.button-container--success]="success"
+  [class.button-container--danger]="danger" [class.button-container--warning]="warning"
+  [class.button-container--info]="info" [class.button-container--icon]="icon" (click)="_click.emit()">
+  <fa-icon *ngIf="icon" [icon]="icon" class="fa-xl"></fa-icon>
+  {{text}}
+</button>

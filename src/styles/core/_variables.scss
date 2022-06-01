@@ -1,0 +1,50 @@
+@use "sass:math";
+
+$mq: (
+  "xs": 0,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px,
+);
+
+$colors: (
+  "transparent": transparent,
+  "light": #f7f7f7,
+  "white": #ffffff,
+  "black": #040202,
+
+  "primary": #0d6efd,
+  "secondary": #6c757d,
+  "success": #198754,
+  "warning": #ffc107,
+  "danger": #dc3545,
+  "info": #0dcaf0,
+);
+
+$shadows: (
+  "drop-shadow": rgba(0, 0, 0, 0.24) 0px 3px 8px -3px,
+);
+
+@mixin mq($mq-value) {
+  @media (min-width: map-get($mq, $mq-value)) {
+    @content;
+  }
+}
+
+@function shadow($shadow-value) {
+  @return map-get($shadows, $shadow-value);
+}
+
+@function size($mq-value) {
+  @return map-get($mq, $mq-value);
+}
+
+@function color($color-value) {
+  @return map-get($colors, $color-value);
+}
+
+@function rem($size) {
+  @return math.div($size, 16px) * 1rem;
+}

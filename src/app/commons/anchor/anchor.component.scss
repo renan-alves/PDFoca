@@ -1,0 +1,29 @@
+@import "variables";
+
+.anchor-container {
+  position: relative;
+  transition: color .3s ease-in-out;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: rem(3px);
+    background-color: color("primary");
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+
+  &:hover {
+    color: color("primary");
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+  }
+
+  &--active {
+    color: color("primary");
+  }
+}
