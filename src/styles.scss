@@ -1,9 +1,10 @@
 @import "./styles/index";
-@import 'typography';
+@import "typography";
 
 body {
   background-color: color("light");
 }
+
 h1 {
   @include headline-h1();
 }
@@ -20,7 +21,7 @@ h4 {
   @include headline-h4;
 }
 
-p, a {
+p {
   @include paragraph;
 }
 
@@ -30,4 +31,13 @@ small {
 
 button {
   @include button;
+}
+
+.menu-modal {
+  display: none;
+
+  &__dialog {
+    width: 50%;
+    margin: rem(50px) rem(15px) 0 auto;
+  }
 }

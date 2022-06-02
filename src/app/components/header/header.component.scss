@@ -2,16 +2,19 @@
 @import "typography";
 
 .header-container {
-  @include headline-h4;
-  box-shadow: shadow('drop-shadow');
+  display: flex;
+  align-items: center;
+  box-shadow: shadow("drop-shadow");
   width: 100%;
+  height: rem(60px);
 
   &__content {
     display: flex;
     align-items: center;
     margin: 0 auto;
     padding: 0 rem(15px);
-    max-width: size('xl');
+    width: 100%;
+    max-width: size("xl");
     position: relative;
 
     &__logo {
@@ -19,6 +22,7 @@
 
       img {
         object-fit: contain;
+        height: rem(50px);
       }
     }
 
@@ -27,17 +31,8 @@
       width: 100%;
 
       &--mobile {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        right: 0;
-        top: 100%;
-        background-color: color("white");
-
-
-        &__item {
-          padding: rem(10px) 0;
-          text-align: center;
+        &__modal {
+          margin: rem(50px);
         }
       }
 
@@ -48,6 +43,7 @@
         justify-content: center;
 
         &__item {
+          @include menu;
           padding: 0 rem(10px);
         }
 

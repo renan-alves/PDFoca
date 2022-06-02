@@ -1,0 +1,11 @@
+@import "variables";
+@import "typography";
+
+.menu-container {
+  @include menu;
+  padding: rem(10px) rem(15px);
+
+  &__item {
+    padding: rem(7.5px) 0;
+  }
+}

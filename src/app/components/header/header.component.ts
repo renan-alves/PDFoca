@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { faBars, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -14,11 +14,16 @@ export class HeaderComponent implements OnInit {
   faBars: IconDefinition = faBars;
 
   link: string = "";
-  isMobile: boolean;
+  isMobile: boolean = false;
+
+  @HostListener("window:resize", ["$event"])
+  onResize() {
+    this.stylePage();
+  }
 
   constructor(private router: Router,
     private modalService: NgbModal) {
-    this.isMobile = window.innerWidth < 576 ? true : false;
+    this.stylePage();
   }
 
   ngOnInit(): void {
@@ -26,6 +31,19 @@ export class HeaderComponent implements OnInit {
   }
 
   openMenu(): void {
-    this.modalService.open(MenuComponent);
+    const ref = this.modalService.open(MenuComponent, {
+      backdropClass: "menu-modal",
+      modalDialogClass: "menu-modal__dialog"
+    });
+
+    ref.componentInstance.link = this.link;
+  }
+
+  stylePage(): void {
+    this.isMobile = window.innerWidth < 576 ? true : false;
+  }
+
+  get imageSrc() {
+    return this.isMobile ? "/assets/logo-mobile.png" : "/assets/logo.png";
   }
 }

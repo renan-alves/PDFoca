@@ -1,1 +1,6 @@
-<p>menu works!</p>
+<ul class="menu-container">
+    <li class="menu-container__item"><commons-anchor text="Home" [active]="link === '/home'"></commons-anchor></li>
+    <li class="menu-container__item"><commons-anchor text="Ajuda" [active]="link === '/ajuda'"></commons-anchor></li>
+    <li class="menu-container__item"><commons-anchor text="Contato" [active]="link === '/contato'"></commons-anchor></li>
+    <li class="menu-container__item"><commons-button text="Apoiar" [primary]="true" [full]="true"></commons-button></li>
+</ul>

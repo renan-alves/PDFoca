@@ -72,7 +72,12 @@
     }
   }
 
+  &--full {
+    width: 100%;
+  }
+
   &--icon {
     border: none;
+    padding: rem(5px);
   }
 }

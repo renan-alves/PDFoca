@@ -88,3 +88,10 @@
     font-size: rem(14px);
   }
 }
+
+@mixin menu() {
+  font-weight: 600;
+  font-style: normal;
+  font-size: rem(18px);
+  line-height: 1.2;
+}
