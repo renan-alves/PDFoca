@@ -5,6 +5,7 @@
   font-size: rem(22px);
   line-height: 1.2;
   font-weight: 600;
+  letter-spacing: rem(3px);
 
   @include mq('lg') {
     font-size: rem(24px);
@@ -90,7 +91,7 @@
 }
 
 @mixin menu() {
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
   font-size: rem(18px);
   line-height: 1.2;

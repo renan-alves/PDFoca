@@ -12,13 +12,20 @@ const routes: Routes = [
   {
     path: '',
     component: MainLayoutComponent,
+
     children: [
       {
         path: 'home',
         loadChildren: () => HomeModule,
       }
     ]
-  }];
+  },
+  {
+    path: '**',
+    pathMatch: 'full',
+    redirectTo: 'home'
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

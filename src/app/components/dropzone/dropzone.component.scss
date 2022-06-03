@@ -1,0 +1,12 @@
+@import "variables";
+@import "typography";
+
+.dropzone-container {
+  height: rem(300px);
+  width: 100%;
+  border: rem(3px) dashed color("black");
+
+  @include mq("md") {
+    height: rem(600px);
+  }
+}

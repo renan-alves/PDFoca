@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "site": "pdfoca-4c933",
+    "public": "dist/pdfoca",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],"rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
