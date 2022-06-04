@@ -18,7 +18,9 @@ export class ButtonComponent implements OnInit {
   @Input() warning: boolean = false;
   @Input() info: boolean = false;
 
+  @Input() borderless: boolean = false;
   @Input() full: boolean = false;
+  @Input() big: boolean = false;
 
   @Output() _click = new EventEmitter();
 

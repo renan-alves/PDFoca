@@ -10,32 +10,12 @@
     padding: rem(30px) 0;
   }
 
-  &__content {
-    display: flex;
-    flex-direction: column;
+  &__dropzone {
+    flex: 1;
+    margin: rem(30px) 0;
 
     @include mq("md") {
-      flex-direction: row;
-    }
-
-    &__dropzone {
-      flex: 1;
-      margin: rem(30px) 0;
-
-      @include mq("md") {
-        margin: 0 rem(30px);
-      }
-    }
-  }
-
-  .anuncio {
-    background-color: antiquewhite;
-    height: rem(90px);
-    width: 100%;
-
-    @include mq("md") {
-      height: rem(600px);
-      width: rem(160px);
+      margin: 0 rem(30px);
     }
   }
 }

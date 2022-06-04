@@ -1,19 +1,21 @@
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { NgbModalConfig, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxFileDropModule } from 'ngx-file-drop';
 import { CommonsModule } from '../commons/commons.module';
+import { DropzoneComponent } from './dropzone/dropzone.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './header/menu/menu.component';
-import { DropzoneComponent } from './dropzone/dropzone.component';
-
-
 
 @NgModule({
   declarations: [HeaderComponent, MenuComponent, DropzoneComponent],
   imports: [
     CommonModule,
     CommonsModule,
-    NgbModalModule
+    NgbModalModule,
+    HttpClientModule,
+    NgxFileDropModule
   ],
   exports: [HeaderComponent, DropzoneComponent]
 })

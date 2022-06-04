@@ -2,11 +2,11 @@
 
 $mq: (
   "xs": 0,
-  "sm": 576px,
-  "md": 768px,
-  "lg": 992px,
-  "xl": 1200px,
-  "xxl": 1400px,
+  "sm": rem(576px),
+  "md": rem(768px),
+  "lg": rem(992px),
+  "xl": rem(1200px),
+  "xxl": rem(1400px),
 );
 
 $colors: (

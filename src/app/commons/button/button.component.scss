@@ -1,10 +1,15 @@
 @import "variables";
+@import "typography";
 
 .button-container {
   padding: rem(8px) rem(22px);
   border-radius: rem(4px);
   transition: all .3s ease;
   border: rem(2px) solid;
+
+  &--icon {
+    padding: rem(5px);
+  }
 
   &--primary {
     background-color: color("primary");
@@ -72,12 +77,24 @@
     }
   }
 
+  &--borderless {
+    border: none;
+  }
+
   &--full {
     width: 100%;
   }
 
-  &--icon {
-    border: none;
+  &--big {
+    @include headline-h2;
     padding: rem(5px);
+
+    @include mq("sm") {
+      padding: rem(10px) rem(26px);
+    }
+
+    fa-icon {
+      margin-left: rem(10px);
+    }
   }
 }

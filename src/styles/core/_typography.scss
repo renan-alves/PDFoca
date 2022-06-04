@@ -19,7 +19,7 @@
 @mixin headline-h2() {
   font-weight: 600;
   font-style: normal;
-  font-size: rem(22px);
+  font-size: rem(18px);
   line-height: 1.2;
 
   @include mq('lg') {

@@ -2,11 +2,52 @@
 @import "typography";
 
 .dropzone-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   height: rem(300px);
   width: 100%;
   border: rem(3px) dashed color("black");
 
   @include mq("md") {
-    height: rem(600px);
+    height: rem(500px);
   }
+
+  &__main-button {
+    @include headline-h2;
+  }
+
+  &__drop-option {
+    display: none;
+
+    @include mq("md") {
+      @include headline-h3;
+      display: block;
+      margin-top: rem(10px);
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+}
+
+::ng-deep .ngx-file-drop__drop-zone {
+  height: 100% !important;
+  width: 100vw !important;
+  border: none !important;
+  border-radius: 0 !important;
+  max-width: calc(size("xl") - rem(30px));
+
+  &--over {
+    background-color: color("info") !important;
+  }
+}
+
+::ng-deep .ngx-file-drop__content {
+  display: flex;
+  flex-direction: column;
+  color: initial !important;
+  height: rem(500px) !important;
 }

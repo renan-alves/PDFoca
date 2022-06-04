@@ -1,3 +1,11 @@
 <div class="dropzone-container">
+  <ngx-file-drop (onFileDrop)="dropped($event)">
+    <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+      <commons-button [big]="true" [primary]="true" [icon]="faCirclePlus" text="Escolha seus arquivos" (_click)="file.click()"></commons-button>
+      <div class="dropzone-container__drop-option">Ou os solte aqui</div>
+    </ng-template>
+  </ngx-file-drop>
 
+  <input type="file" #file class="dropzone-container__input" multiple (change)="onFileSelected($event)"/>
 </div>
+
